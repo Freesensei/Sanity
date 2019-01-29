@@ -1,6 +1,6 @@
 import pygame, sys, time
 
-WHITE= (255, 255, 255)
+WHITE= [255, 255, 255]
 
     #background = pygame.image.load()
 """
@@ -165,7 +165,7 @@ def main():
     pygame.display.set_mode((1920, 1080))
 
     pygame.display.set_caption("")
-
+    screen.fill(WHITE)
     active_sprite_list = pygame.sprite.Group()
 
     player.rect.x = 50
