@@ -96,8 +96,7 @@ for i in (items_list):
 ###################  
 
 def start_narrative():
-    print("A long long time ago there was a village...")
-    print("Known for it's")
+    print("A long time ago there was a village stunning and beautiful at sight which flourished throughout time, until that one faithful day...")
 def Player_Talk_little_girl():
     print("Hello")
     print("...")

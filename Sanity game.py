@@ -1,10 +1,14 @@
 import pygame, sys, time
 
+<<<<<<< HEAD
 screenwidth = 1920
 screenheight = 1080
 base_heigt = 1000
 
 WHITE= (255, 255, 255)
+=======
+WHITE= [255, 255, 255]
+>>>>>>> cfe874a8c831b0db0a90a54dc84a867362112f09
 
     #background = pygame.image.load()
 """
@@ -167,9 +171,13 @@ def main():
     pygame.display.set_mode((1920, 1080))
 
     pygame.display.set_caption("")
+<<<<<<< HEAD
 
     boy = Player()
 
+=======
+    screen.fill(WHITE)
+>>>>>>> cfe874a8c831b0db0a90a54dc84a867362112f09
     active_sprite_list = pygame.sprite.Group()
 
     boy.rect.x = 50
