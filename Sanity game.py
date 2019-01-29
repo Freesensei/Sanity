@@ -165,6 +165,12 @@ def main():
     pygame.display.set_mode((1920, 1080))
 
     pygame.display.set_caption("")
+
+    active_sprite_list = pygame.sprite.Group()
+
+    player.rect.x = 50
+    player.rect.y = base_heigt - player.rect.height
+    active_sprite_list.add(player)
     
     boy = Player()
 
