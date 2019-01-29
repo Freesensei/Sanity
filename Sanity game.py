@@ -2,11 +2,7 @@ import pygame, sys, time
 
 WHITE= (255, 255, 255)
 
-    background = pygame.image.load()
-
-
-
-
+    #background = pygame.image.load()
 
 class Player(pygame.sprite.Sprite):
     change_x = 0
@@ -19,11 +15,9 @@ class Player(pygame.sprite.Sprite):
 
     directon = "R"
 
-    char = pygame.image.load()
-    walkRight = [pygame.image.load("TheGuy.png")]
-    walkLeft = [pygame.image.load("TheGuy2.png")]
-
-
+    #char = pygame.image.load()
+    #walkRight = [pygame.image.load("TheGuy.png")]
+    #walkLeft = [pygame.image.load("TheGuy2.png")]
 
     def __init__(self, x, y, width, height):
         pygame.sprite.Sprite.__init__(self)
@@ -35,7 +29,6 @@ class Player(pygame.sprite.Sprite):
         self.height = height
         self.vel = 6    
         
-    
         self.image = pygame.image.get_rect()
         self.rect.y = y
         self.rect.x = x
@@ -90,10 +83,6 @@ def main():
             
             if event.type == pygame.K_s:
                 boy.go_Down()
-            
-            
-
-                
             
         Player.draw()
         pygame.display.flip()
