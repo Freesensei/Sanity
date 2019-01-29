@@ -1,7 +1,7 @@
 import pygame, sys, time
 
 WHITE= [255, 255, 255]
-
+base_height = 1000
     #background = pygame.image.load()
 """
 class Player(pygame.sprite.Sprite):
@@ -133,16 +133,16 @@ class Player(pygame.sprite.Sprite):
         else:
             self.change_y += .50
 
-        if self.rect.y >= base_heigt - self.rect.height and self.change_y >= 0:
+        if self.rect.y >= base_height - self.rect.height and self.change_y >= 0:
             self.change_y = 0
-            self.rect.y = base_heigt - self.rect.height
+            self.rect.y = base_height - self.rect.height
 
     def jump(self):
         self.rect.y += 2
         platform_hit_list = pygame.sprite.spritecollide(self, self.level.platform_list, False)
         self.rect.y -= 2
 
-        if len(platform_hit_list) > 0 or self.rect.bottom >= base_heigt:
+        if len(platform_hit_list) > 0 or self.rect.bottom >= base_height:
             self.change_y = -16
 
     def go_left(self):
@@ -163,16 +163,16 @@ def main():
     screen = pygame.display.set_mode((screenwidth, screenheight))
 
     pygame.display.set_mode((1920, 1080))
-
+    boy = Player()
     pygame.display.set_caption("")
     screen.fill(WHITE)
     active_sprite_list = pygame.sprite.Group()
 
-    player.rect.x = 50
-    player.rect.y = base_heigt - player.rect.height
-    active_sprite_list.add(player)
+    boy.rect.x = 50
+    boy.rect.y = base_height - boy.rect.height
+    active_sprite_list.add(boy)
     
-    boy = Player()
+    
 
     running = True
     while running:
