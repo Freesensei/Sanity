@@ -15,21 +15,21 @@ class Player(pygame.sprite.Sprite):
 
     directon = "R"
 
-    #char = pygame.image.load()
-    #walkRight = [pygame.image.load("TheGuy.png")]
-    #walkLeft = [pygame.image.load("TheGuy2.png")]
+    
+    walkRight = [pygame.image.load("TheGuy.png")]
+    walkLeft = [pygame.image.load("TheGuy2.png")]
 
     def __init__(self, x, y, width, height):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.surface([70, 70])
-        self.image.fill(WHITE)
+        self.image = self.walkRight
+        #self.image.fill(WHITE)
         self.x = x
         self.y = y
         self.width = width
         self.height = height
         self.vel = 6    
         
-        self.image = pygame.image.get_rect()
+        self.rect = self.image.get_rect()
         self.rect.y = y
         self.rect.x = x
 
@@ -62,7 +62,7 @@ def main():
 
     pygame.display.set_caption("")
     
-    boy = Player(50, 50, )
+    boy = Player(50, 50, 100, 100)
 
     running = True
     while running:
