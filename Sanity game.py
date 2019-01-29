@@ -1,15 +1,14 @@
 import pygame, sys, time
 
-
 screenwidth = 1920
 screenheight = 1080
-base_heigt = 1000
+base_height = 1000
 
-WHITE= (255, 255, 255)
+
 
 WHITE= [255, 255, 255]
 
-base_height = 1000
+
 
 
 
@@ -191,7 +190,7 @@ def main():
     
     
 
-    player.rect.y = base_heigt - player.rect.height
+    player.rect.y = base_height - player.rect.height
     active_sprite_list.add(player)
 
     running = True
