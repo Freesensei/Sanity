@@ -1,5 +1,9 @@
 import pygame, sys, time
 
+screenwidth = 1920
+screenheight = 1080
+base_heigt = 1000
+
 WHITE= (255, 255, 255)
 
     #background = pygame.image.load()
@@ -157,8 +161,6 @@ class Player(pygame.sprite.Sprite):
         self.change_x = 0
 
 def main():
-    screenwidth = 1920
-    screenheight = 1080
     pygame.init()
     screen = pygame.display.set_mode((screenwidth, screenheight))
 
