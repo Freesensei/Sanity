@@ -166,13 +166,13 @@ def main():
 
     pygame.display.set_caption("")
 
+    boy = Player()
+
     active_sprite_list = pygame.sprite.Group()
 
-    player.rect.x = 50
+    boy.rect.x = 50
     player.rect.y = base_heigt - player.rect.height
     active_sprite_list.add(player)
-    
-    boy = Player()
 
     running = True
     while running:
