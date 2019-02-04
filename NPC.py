@@ -130,8 +130,6 @@ def Merchant():
         elif choice == 0:
             Merchant()
         
-        
-
 def dead():
     print("Wrong move friend. You shall be lost forever into the infinite abyss of nothingness.")
     exit()

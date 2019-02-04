@@ -94,6 +94,7 @@ class Player(pygame.sprite.Sprite):
         self.image = self.walking_frames_r[0]
 
         self.rect = self.image.get_rect()
+        
 
     def update(self):
         self.calc_grav()
@@ -168,7 +169,8 @@ class Player(pygame.sprite.Sprite):
 
     def stop(self):
         self.change_x = 0
-
+class level:
+    def __init__(self,)
 def main():
     pygame.init()
     screen = pygame.display.set_mode((screenwidth, screenheight))
@@ -192,8 +194,8 @@ def main():
     
     
 
-    player.rect.y = base_height - player.rect.height
-    active_sprite_list.add(player)
+    boy.rect.y = base_height - boy.rect.height
+    active_sprite_list.add(boy)
 
     running = True
     while running:
