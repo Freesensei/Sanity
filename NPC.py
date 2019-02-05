@@ -4,7 +4,6 @@ Running = False
 i = 0, 1, 2, 3, 4, 5, 6 
 ##################
 class NPC:
-
     raise_amt = 1.05
     num_npc_amount = 0
     
@@ -35,13 +34,13 @@ class NPC:
         return str(self.email) 
   
 npc = []
-npc.append(NPC("Karen", "lee", 50000, 0))   # npc[0]
-npc.append(NPC("Tea", "cli", 60000, 1))     # npc[1]
+npc.append(NPC("Karen", "Lee", 50000, 0))   # npc[0]
+npc.append(NPC("Tea", "Cli", 60000, 1))     # npc[1]
 npc.append(NPC("James", "Jin", 50000, 2))   # npc[2]
-npc.append(NPC("Kasper", "test", 60000, 3)) # npc[3]
-npc.append(NPC("Isak", "test", 70000, 4))   # npc[4]
+npc.append(NPC("Kasper", "Test", 60000, 3)) # npc[3]
+npc.append(NPC("Isak", "Test", 70000, 4))   # npc[4]
 npc.append(NPC("Glenn", "Clint", 50000, 5)) # npc[5]
-npc.append(NPC("Joe", "test", 50000, 6))    # npc[6]
+npc.append(NPC("Joe", "Test", 50000, 6))    # npc[6]
 
 for i in (npc):
     print(NPC.Full_name(i))

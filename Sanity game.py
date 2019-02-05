@@ -177,6 +177,7 @@ class level():
     def __init__(self, player):
         self.active_sprite_list = pygame.sprite.Group()
         self.player = player
+        self.NPC_list = pygame.sprite.Group()
     
     def update(self):
         self.active_sprite_list.update()
@@ -184,6 +185,13 @@ class level():
     def draw(self, screen):
         screen.fill((255,255,255))
         self.active_sprite_list.draw(screen)
+    
+    def shift_world(self, shift_x):
+        self.world_shift += shift_x
+
+        for NPC in NPC_list:
+            self.NPC_list.draw(screen)
+
     
 
 def main():
