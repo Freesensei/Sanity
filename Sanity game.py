@@ -197,7 +197,7 @@ class Level_01(Level):
     def __init__(self, player):
         Level.__init__(self, player)
 
-        self.background = pygame.image.load("unspecified-1-1.jpeg").convert()    
+        self.background = pygame.image.load("unspecified-1-1.jpeg").convert()   
 
 def main():
     pygame.init()
