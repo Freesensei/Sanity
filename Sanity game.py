@@ -169,6 +169,7 @@ class Player(pygame.sprite.Sprite):
 
     def stop(self):
         self.change_x = 0
+
 class level():
     
     active_sprite_list = None
