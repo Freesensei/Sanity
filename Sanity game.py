@@ -167,8 +167,23 @@ class Player(pygame.sprite.Sprite):
 
     def stop(self):
         self.change_x = 0
-class level:
-    def __init__(self,)
+class level():
+    
+    active_sprite_list = None
+    background = None
+    
+    def __init__(self, player):
+        self.active_sprite_list = pygame.sprite.Group()
+        self.player = player
+    
+    def update(self):
+        self.active_sprite_list.update()
+    
+    def draw(self, screen):
+        screen.fill((255,255,255))
+        self.active_sprite_list.draw(screen)
+    
+
 def main():
     pygame.init()
     screen = pygame.display.set_mode((screenwidth, screenheight))
@@ -181,7 +196,7 @@ def main():
     boy = Player()
 
 
-    screen.fill(WHITE)
+    
 
     active_sprite_list = pygame.sprite.Group()
 
