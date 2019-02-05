@@ -170,7 +170,7 @@ class Player(pygame.sprite.Sprite):
     def stop(self):
         self.change_x = 0
 
-class level():
+class Level():
     
     active_sprite_list = None
     background = None
@@ -193,20 +193,29 @@ class level():
         for NPC in NPC_list:
             self.NPC_list.draw(screen)
 
-    
+class Level_01(Level):
+    def __init__(self, player):
+        Level.__init__(self, player)
+
+        self.background = pygame.image.load("unspecified-1-1.jpeg").convert()    
 
 def main():
     pygame.init()
     screen = pygame.display.set_mode((screenwidth, screenheight))
 
-    pygame.display.set_mode((1920, 1080))
+    #pygame.display.set_mode((0,0), pygame.FULLSCREEN)
+    pygame.display.set_mode((screenwidth, screenheight))
     boy = Player()
     pygame.display.set_caption("")
 
 
     boy = Player()
 
+    level_list = []
+    level_list.append(Level_01(boy))
 
+    current_level_no = 0
+    current_level = level_list[current_level_no]
     
 
     active_sprite_list = pygame.sprite.Group()
@@ -241,7 +250,7 @@ def main():
             if event.type == pygame.K_s:
                 boy.go_Down()
             
-        Player.draw()
+        active_sprite_list.draw(screen)
         pygame.display.flip()
 
     pygame.quit()
