@@ -1,2 +1,4 @@
 Characters:
-Kevin - Huvud person
+Main Character
+Antagonist
+
