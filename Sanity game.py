@@ -202,15 +202,13 @@ class Level_01(Level):
 def main():
     pygame.init()
     screen = pygame.display.set_mode((screenwidth, screenheight))
-
     #pygame.display.set_mode((0,0), pygame.FULLSCREEN)
     pygame.display.set_mode((screenwidth, screenheight))
     boy = Player()
     pygame.display.set_caption("")
 
-
     boy = Player()
-
+    
     level_list = []
     level_list.append(Level_01(boy))
 
@@ -219,7 +217,7 @@ def main():
     
 
     active_sprite_list = pygame.sprite.Group()
-
+    boy.level = current_level()
     boy.rect.x = 50
 
     boy.rect.y = base_height - boy.rect.height
@@ -249,7 +247,7 @@ def main():
             
             if event.type == pygame.K_s:
                 boy.go_Down()
-            
+        current_level.update()   
         active_sprite_list.draw(screen)
         pygame.display.flip()
 
