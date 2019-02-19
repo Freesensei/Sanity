@@ -96,7 +96,7 @@ class Player(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         
 
-    def update(self):
+    def update(self):   
         self.calc_grav()
 
         self.rect.x += self.change_x
@@ -206,8 +206,6 @@ def main():
     pygame.display.set_mode((screenwidth, screenheight))
     boy = Player()
     pygame.display.set_caption("")
-
-    boy = Player()
     
     level_list = []
     level_list.append(Level_01(boy))
@@ -217,7 +215,7 @@ def main():
     
 
     active_sprite_list = pygame.sprite.Group()
-    boy.level = current_level()
+    boy.level = current_level
     boy.rect.x = 50
 
     boy.rect.y = base_height - boy.rect.height
