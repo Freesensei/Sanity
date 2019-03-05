@@ -1,3 +1,0 @@
-Characters:
-Main Character
-Antagonist
